@@ -1,13 +1,10 @@
-// const { connect } = require("./client");
+const { up, down, left, right, stdin } = require('./constants');
+
 let connection;
-const up = "Move: up";
-const down = "Move: down";
-const right = "Move: right";
-const left = "Move: left";
+
 
 
 const setupInput = (conn) => {
-  const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
@@ -38,6 +35,19 @@ const handleUserInput = function(input) {
   if (input === 'd') {
     console.log("D", right);
     connection.write(right);
+  }
+
+  if (input === 'h') {
+    console.log("h");
+    connection.write("Say: Hello");
+  }
+  if (input === 'j') {
+    console.log("hj");
+    connection.write("Say: lighthouse");
+  }
+  if (input === 'k') {
+    console.log("k");
+    connection.write("Say: lab");
   }
 
 };
