@@ -16,10 +16,10 @@ const connect = function() {
     conn.write("Name: BYE")
   });
 
-  setTimeout(() => {
-    setInterval(() => { conn.write('Move: up') }, 400)
-    setInterval(() => { conn.write('Move: left') }, 750)
-  }, 250);
+  // setTimeout(() => {
+  //   setInterval(() => { conn.write('Move: up') }, 400)
+  //   setInterval(() => { conn.write('Move: left') }, 750)
+  // }, 250);
 
 
 
